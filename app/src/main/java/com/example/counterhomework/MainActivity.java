@@ -41,4 +41,30 @@ public class MainActivity extends AppCompatActivity {
             outState.putString("reply_text", mShowCount.getText().toString());
         }
     }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        mShowCount.setText(savedInstanceState.getString("reply_text"));
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+    }
+
+    @Override
+    public void onRestart(){
+        super.onRestart();
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+    }
 }
